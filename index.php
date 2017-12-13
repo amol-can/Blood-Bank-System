@@ -37,8 +37,8 @@
 			      	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Register
 				    <span class="caret"></span></a>
 				    <ul class="dropdown-menu">
-				       	<li><a href="#">New Hospital</a></li>
-				        <li><a href="#">New Receiver</a></li>
+				       	<li><a href="hospital/hospital_registration.php">New Hospital</a></li>
+				        <li><a href="receiver/receiver_registration.php">New Receiver</a></li>
 				    </ul>
 			   </li>
 		    </ul>

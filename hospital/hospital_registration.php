@@ -23,8 +23,11 @@
 		    </ul>
 		</div>
 	</nav>
+	
+	<!-- HOSPITAL REGISTRATION FORM -->
 	<div class="container">
-		<!-- HOSPITAL REGISTRATION FORM -->
+
+		<!-- Form content -->
 		<form class="form-horizontal" action='registration.php' method="post">
 		  <fieldset>
 		    <div id="legend">
@@ -47,14 +50,14 @@
             <div class="form-group">
                 <label for="hpincode" class="col-sm-3 control-label">Pin Code</label>
                 <div class="col-sm-9">
-                    <input type="number" id="hpincode" name="pincode" placeholder="Hospital area pin code" class="form-control">
+                    <input type="number" id="hpincode" name="pincode" placeholder="Enter 6 digit hospital area pin code" class="form-control">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="hmobile" class="col-sm-3 control-label">Mobile Number</label>
                 <div class="col-sm-9">
-                    <input type="number" id="hmobile" name="mobile" placeholder="Mobile number" class="form-control">
+                    <input type="number" id="hmobile" name="mobile" placeholder="Enter 10 digit mobile number" class="form-control">
                 </div>
             </div>
 
@@ -77,10 +80,12 @@
 		      <div class="controls text-center">
 		        <button type="submit" name="hRegistration" class="btn btn-success">Register</button>
 		      </div>
+		      <div>
+		      	<p id="message">Set Text</p>
+		      </div>
 		    </div>
 		  </fieldset>
 		</form>
-		<!-- //END OF HOSPITAL REGISTRATION FORM -->
 	</div>
 
 </body>

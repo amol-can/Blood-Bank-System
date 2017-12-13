@@ -28,7 +28,8 @@
 		    		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
 				    <span class="caret"></span></a>
 				    <ul class="dropdown-menu">
-				       	<li><a href="#">Hospital</a></li>
+				    	<!-- Direction to Login Modal -->
+				       	<li><a href="#" data-toggle="modal" data-target="#hospital_login">Hospital</a></li>
 				        <li><a href="#">Receiver</a></li>
 				    </ul>
 		    	</li>
@@ -44,7 +45,41 @@
 		    </ul>
 	  </div>
 	</nav>
-	<!-- //End of Navigation bar block -->
+
+	<!-- Modal -->
+	<div id="hospital_login" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Hospital Login</h4>
+	      </div>
+
+	      <form class="form-group" action="index_login.php" method="post">
+			<div class="modal-body">
+			  <div class="form-group">
+			  	<label for="login_email" class="text-center col-sm-4">Email Id</label>
+			         <input type="email" id="login_email" name="username" class="form-group" placeholder="User id">			  
+			     </div>
+			     <div class="form-group">
+			     	<label for="login_pass" class="text-center col-sm-4">Password</label>
+			     	<input type="password" id="login_pass" name="password" class="form-group" placeholder="Enter Password">
+			     </div>
+			     <div class="form-group text-center">
+			     	<button type="submit" name="hospital_login" id="hlogin" class="btn btn-info">Login</button>
+			     </div>
+			</div>
+	      </form>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
 
 </body>
 </html>

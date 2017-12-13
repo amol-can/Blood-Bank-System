@@ -25,7 +25,7 @@
 	</nav>
 	<div class="container">
 		<!-- RECEIVER REGISTRATION FORM -->
-		<form class="form-horizontal" action='registration.php' method="post">
+		<form class="form-horizontal" action='r_registration.php' method="post">
 		  <fieldset>
 		    <div id="legend">
 		      <legend class="text-center">Receiver Registration</legend>
@@ -34,6 +34,22 @@
                 <label for="name" class="col-sm-3 control-label">Name</label>
                 <div class="col-sm-9">
                     <input type="text" id="name" name="name" placeholder="Name" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="blood_group" class="col-sm-3 control-label">Blood Group</label>
+                <div class="col-sm-9">
+                    <select name="bgroup" id="blood_group" class="form-control">
+                    	<option value="A+">A+</option>
+                    	<option value="O+">O+</option>
+                    	<option value="B+">B+</option>
+                    	<option value="AB+">AB+</option>
+                    	<option value="A-">A-</option>
+                    	<option value="O-">O-</option>
+                    	<option value="B-">B-</option>
+                    	<option value="AB-">AB-</option>
+                    </select>
                 </div>
             </div>
 
@@ -47,30 +63,14 @@
             <div class="form-group">
                 <label for="pincode" class="col-sm-3 control-label">Pin Code</label>
                 <div class="col-sm-9">
-                    <input type="number" id="pincode" name="pincode" placeholder="Your area pin code" class="form-control">
+                    <input type="number" id="pincode" name="pincode" placeholder="Enter 6 digit area pin code" class="form-control">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="mobile" class="col-sm-3 control-label">Mobile Number</label>
                 <div class="col-sm-9">
-                    <input type="number" id="mobile" name="mobile" placeholder="Mobile number" class="form-control">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="person" class="col-sm-3 control-label">Contact Person</label>
-                <div class="col-sm-9">
-                    <select name="name" class="form-control">
-                    	<option value="A+">A+</option>
-                    	<option value="O+">O+</option>
-                    	<option value="B+">B+</option>
-                    	<option value="AB+">AB+</option>
-                    	<option value="A-">A-</option>
-                    	<option value="O-">O-</option>
-                    	<option value="B-">B-</option>
-                    	<option value="AB-">AB-</option>
-                    </select>
+                    <input type="number" id="mobile" name="mobile" placeholder="Enter 10 digit mobile number" class="form-control">
                 </div>
             </div>
 

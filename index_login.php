@@ -1,6 +1,6 @@
 <?php
    include("include/config.php");
-   /*session_start();*/
+   session_start();
    
    if(isset($_POST['hospital_login'])) {
       // username and password sent from form 
@@ -17,11 +17,12 @@
       
       if($count==1) {
         
-         $_SESSION['current_user'] = $myusername;
+         $_SESSION['active_user'] = $myusername;
          $_SESSION['user_type'] = $row['user_type'];
+         $_SESSION['user_id'] = $row['hospital_id'];
 
          /*echo "<script>alert('Login Sucessfully')</script>";*/
-          header("location: hospital/hospital_home.php");
+          header("location: hospital/add_blood_info.php");
          
       }
      else{
@@ -32,7 +33,7 @@
    }
    }
    elseif(isset($_POST['receiver_login'])) {
-      // username and password sent from form 
+      // username and password sent from Modal form 
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
@@ -49,7 +50,6 @@
          $_SESSION['current_user'] = $myusername;
          $_SESSION['user_type'] = $row['user_type'];
 
-         /*echo "<script>alert('Login Sucessfully')</script>";*/
           header("location: receiver/receiver_home.php");
          
       }

@@ -80,6 +80,7 @@
 
 	  </div>
 	</div>
+	
 
 	<!-- Receiver login Modal -->
 	<div id="receiver_login" class="modal fade" role="dialog">

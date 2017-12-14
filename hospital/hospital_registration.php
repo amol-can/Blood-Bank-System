@@ -80,9 +80,6 @@
 		      <div class="controls text-center">
 		        <button type="submit" name="hRegistration" class="btn btn-success">Register</button>
 		      </div>
-		      <div>
-		      	<p id="message">Set Text</p>
-		      </div>
 		    </div>
 		  </fieldset>
 		</form>

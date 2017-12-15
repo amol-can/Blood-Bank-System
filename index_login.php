@@ -47,8 +47,9 @@
       
       if($count==1) {
         
-         $_SESSION['current_user'] = $myusername;
+         $_SESSION['active_user'] = $myusername;
          $_SESSION['user_type'] = $row['user_type'];
+         $_SESSION['user_id'] = $row['receiver_id'];
 
           header("location: receiver/receiver_home.php");
          

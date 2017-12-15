@@ -5,6 +5,7 @@
 	<meta charset=utf-8>
 	<meta name=description content="Designed a simple ‘Blood Bank System’ web application">
 	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="custom/my_css.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -116,9 +117,9 @@
 	</div>
 
 	<!-- Available Bood Samples  -->
-	<div class="container" id="coursepre">
-
-        <table class="table table-bordered" id="table1">
+	<div class="container" id="show_blood_avail">
+		<h4 class="text-center">BLOOD AVALIBILITY STATUS</h4>
+        <table class="table table-striped table-bordered" id="table1">
             <thead>
                 <tr>
                     <th width="10%">Hospital ID</th>
@@ -133,6 +134,11 @@
             </tbody>                                                 
         </table>
         <script src="custom/available_blood.js"></script>                                
+    </div>
+
+    <div class="cutom_footer">
+    	<p>Posted by:<a href="https://www.linkedin.com/in/amolpatilcan">Amol Patil</p>
+    	<p>Contact information: <a href="mailto:computer.warriors2020@gmail.com.com">  amol@bloodbank.com</a>.</p>
     </div>
 
 </body>

@@ -10,7 +10,7 @@
 		
 		if (!isset($_GET) || empty($_GET))
 		{
-		    $query = "SELECT hospital_login.name,hospital_login.email,blood_inventry.hospital_id,blood_inventry.blood_group,blood_inventry.blood_quantity from blood_inventry INNER JOIN hospital_login ON blood_inventry.hospital_id = hospital_login.hospital_id GROUP BY blood_group,email";
+		    $query = "SELECT req_blood_group,receiver_id,receiver_email,req_time FROM blood_sample_request ";
 		}
 		$result = $db->query($query);
 
@@ -21,11 +21,10 @@
 		  //Converting the results into an associative array
 		  while($row = $result->fetch_assoc()) {
 		    $jsonArrayItem = array();
-		    $jsonArrayItem['name'] = $row['name'];
-		    $jsonArrayItem['email'] = $row['email'];
-		    $jsonArrayItem['h_id'] = $row['hospital_id'];
-		    $jsonArrayItem['blood_group'] = $row['blood_group'];
-		    $jsonArrayItem['blood_quantity'] = $row['blood_quantity'];		    
+		    $jsonArrayItem['blood_group'] = $row['req_blood_group'];
+		    $jsonArrayItem['receiver_id'] = $row['receiver_id'];
+		    $jsonArrayItem['email'] = $row['receiver_email'];
+		    $jsonArrayItem['update_time'] = $row['req_time'];
 
 		    //append the above created object into the main array.
 		    array_push($jsonArray, $jsonArrayItem);

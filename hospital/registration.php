@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("../include/config.php");
 
     /* For registration of hospital*/        
@@ -28,13 +29,14 @@
     /* For storing new Blood related data*/
     elseif (isset($_POST['add_blood_info']))
         {
-            $hid=$_SESSION['user_id'];
             $blood_group=$_POST['bgroup'];
             $units=$_POST['units'];
-            
+
+            /* Storing user id of user through SESSION*/
+            $hid=$_SESSION['user_id'];
 
             
-            if($units == ''){echo "<script>alert('Please enter units')</script>";exit();}
+            if($hid == ''){echo "<script>alert('Session issue')</script>";exit();}
             else
             {
                 $query="insert into blood_inventry(blood_group,blood_quantity,hospital_id) values('$blood_group','$units','$hid')";

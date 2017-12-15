@@ -77,7 +77,6 @@
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
-
 	  </div>
 	</div>
 	
@@ -113,9 +112,28 @@
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
-
 	  </div>
 	</div>
+
+	<!-- Available Bood Samples  -->
+	<div class="container" id="coursepre">
+
+        <table class="table table-bordered" id="table1">
+            <thead>
+                <tr>
+                    <th width="10%">Hospital ID</th>
+                    <th width="20%">Hospital Name</th>
+                    <th width="20%">Hospital Email</th>
+                    <th width="20%">Blood Group</th>
+                    <th width="20%">Units(Quantity)</th>
+                    <th width="20%">Action</th>  
+                </tr>  
+            </thead>
+            <tbody>                                                
+            </tbody>                                                 
+        </table>
+        <script src="custom/available_blood.js"></script>                                
+    </div>
 
 </body>
 </html>

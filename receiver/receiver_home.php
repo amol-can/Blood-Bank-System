@@ -6,6 +6,11 @@
 	<meta charset=utf-8>
 	<meta name=description content="Receiver can request the blood samples from this system">
 	<meta name=viewport content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		.colorRank2{
+			background: #A5F1C3;
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="../custom/my_css.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -45,63 +50,10 @@
 		            <tbody>                                                
 		            </tbody>                                                 
 		        </table>
-		        <script src="http://localhost/blood/custom/available_blood.js"></script> 
+		        <!-- Get login user blood Id -->
+		        <script type="text/javascript">var user_blood = "<?php echo $_SESSION['blood_group']; ?>"; </script>
+		        <script src="http://localhost/blood/custom/available_blood.js"></script>  
 
-		        <script>
-		        	$(document).ready(function(){ 
-		        		
-		        	});	  
-		        	$(document).ready(function(){
-					    $("button").click(function(){
-					        var value1 = $('#h_id').text();
-					        var value2 =$('#blood_group').text();
-					        var url="http://localhost/blood/receiver/send_request.php?hospitalId="+value1 + "&" + "bloodGroup=" + value2;
-					        console.log(url);
-					        var res=encodeURI(url);
-
-					            var ReceiverJson = $.ajax({
-					                    url: res,
-					                    dataType: "json",
-					                    async: false
-					                    }).responseText;
-					            alert("Successfull request sent to Hospital");
-					            $('button').attr('disabled','disabled');
-					            $("button").css("background-color","#CFCFD6");
-					    });
-					});  
-
-		        	function colorCode(){
-                                        var rows = document.getElementById("table1").getElementsByTagName("tbody")
-                                              [0].getElementsByTagName("tr");
-                                              var user_blood = "<?php echo $_SESSION['blood_group']; ?>"; 
-                                              console.log("Blood Group",user_blood);
-
-                                                // loops through each row
-                                                for (i = 0; i < rows.length; i++) {
-                                                       var cells = rows[i].getElementsByTagName('td');
-                                                       
-                                                    
-                                                        if (cells[4].innerHTML == 'AB+'){
-                                                        	console.log("Amolllllll",cells[4].innerHTML);
-	                                                        $('button').removeAttr('disabled');
-			        										$("button").css("background-color","#ADE8E2");
-			        										}
-
-                                                        /*else if (cells[4].innerHTML == 'O+'){
-                                                        	console.log("We are in Else if Block");
-                                                            rows[i] = $('button').removeAttr('disabled');
-                                                            row[i] = $("button").css("background-color","#ADE8E2"); 
-                                                        }*/
-                                                        else{
-                                                         
-                                                        	console.log("Else block",cells[4].innerHTML);
-                       
-                                                    }
-                                                        }
-                                    }
-                                    colorCode();
-
-		        </script>                           
 		    </div>
 
 </body>

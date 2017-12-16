@@ -21,7 +21,6 @@
 		    </div>
 		    <ul class="nav navbar-nav">
 		      <li class="active"><a data-toggle="tab" href="#home">Receiver Home</a></li>
-		      <li><a data-toggle="tab" href="#menu1">Add Details</a></li>
 		    </ul>
 		    <ul class="nav navbar-nav navbar-right">
 		    	<li></li>
@@ -50,7 +49,7 @@
 
 		        <script>
 		        	$(document).ready(function(){ 
-		        		document.getElementById("action_b").style.display = "block";   
+		        		
 		        	});	  
 		        	$(document).ready(function(){
 					    $("button").click(function(){
@@ -66,9 +65,42 @@
 					                    async: false
 					                    }).responseText;
 					            alert("Successfull request sent to Hospital");
-					            document.getElementById("action_b").style.display = "none";
+					            $('button').attr('disabled','disabled');
+					            $("button").css("background-color","#CFCFD6");
 					    });
-					});      
+					});  
+
+		        	function colorCode(){
+                                        var rows = document.getElementById("table1").getElementsByTagName("tbody")
+                                              [0].getElementsByTagName("tr");
+                                              var user_blood = "<?php echo $_SESSION['blood_group']; ?>"; 
+                                              console.log("Blood Group",user_blood);
+
+                                                // loops through each row
+                                                for (i = 0; i < rows.length; i++) {
+                                                       var cells = rows[i].getElementsByTagName('td');
+                                                       
+                                                    
+                                                        if (cells[4].innerHTML == 'AB+'){
+                                                        	console.log("Amolllllll",cells[4].innerHTML);
+	                                                        $('button').removeAttr('disabled');
+			        										$("button").css("background-color","#ADE8E2");
+			        										}
+
+                                                        /*else if (cells[4].innerHTML == 'O+'){
+                                                        	console.log("We are in Else if Block");
+                                                            rows[i] = $('button').removeAttr('disabled');
+                                                            row[i] = $("button").css("background-color","#ADE8E2"); 
+                                                        }*/
+                                                        else{
+                                                         
+                                                        	console.log("Else block",cells[4].innerHTML);
+                       
+                                                    }
+                                                        }
+                                    }
+                                    colorCode();
+
 		        </script>                           
 		    </div>
 

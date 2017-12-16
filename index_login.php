@@ -50,6 +50,7 @@
          $_SESSION['active_user'] = $myusername;
          $_SESSION['user_type'] = $row['user_type'];
          $_SESSION['user_id'] = $row['receiver_id'];
+         $_SESSION['blood_group'] = $row['blood_group'];
 
           header("location: receiver/receiver_home.php");
          

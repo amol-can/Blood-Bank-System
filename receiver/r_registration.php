@@ -19,7 +19,7 @@ if (isset($_POST['registration']))
                 
             if(mysqli_query($db,$query))
             {
-                header("location: receiver_registration.php");
+                header("location: ../index.php");
                 echo "<script>alert('Register Sucessfully')</script>";
             }
         }

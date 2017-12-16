@@ -14,7 +14,7 @@ function drawTable(){
             tr.append("<td id='email'>" + parsed[i].email + "</td>");
             tr.append("<td id='blood_group'>" + parsed[i].blood_group + "</td>");
             tr.append("<td>" + parsed[i].blood_quantity + "</td>");
-            tr.append("<td><button style='display: none;' type='submit' name='actiob_button' id='action_b'>Request Sample</button>");
+            tr.append("<td><button class='form-group btn' type='submit' name='actiob_button' id='action_b' disabled>Request Sample</button>");
             
             $('#table1').append(tr);
         }

@@ -94,7 +94,7 @@
 	            	</div>
 	            	<div class="form-group">
 				      <div class="controls text-center">
-				        <button type="submit" name="add_blood_info" class="btn btn-success">Submit</button>
+				        <button type="submit" name="add_blood_info1" class="btn btn-success">Submit</button>
 				      </div>
 				    </div>
 		    	</fieldset>
@@ -116,7 +116,7 @@
 		            <tbody>                                                
 		            </tbody>                                                 
 		        </table>
-		        <script src="http://localhost/blood/hospital/available_blood.js"></script> 
+		        <script src="http://localhost/blood/hospital/available_blood2.js"></script> 
 			</div>
 		</div>
 	</div>

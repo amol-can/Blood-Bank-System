@@ -20,14 +20,13 @@
                     
                 if(mysqli_query($db,$query))
                 {
-                    header("location: hospital_registration.php");
-                    echo "<script>alert('Succefully Registered')</script>";
+                    header("location: ../index.php");
                 }
             }
     }    
 
     /* For storing new Blood related data*/
-    elseif (isset($_POST['add_blood_info']))
+    elseif (isset($_POST['add_blood_info1']))
         {
             $blood_group=$_POST['bgroup'];
             $units=$_POST['units'];

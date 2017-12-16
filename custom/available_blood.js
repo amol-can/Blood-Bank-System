@@ -25,7 +25,7 @@ function drawTable(){
 
     /* Requesting Samples to hospital by Receivers*/
     $(document).ready(function(){
-        $("button").click(function(){
+        $("#action_b").click(function(){
             var value1 = $('#h_id').text();
             var value2 =$('#blood_group').text();
             var url="http://localhost/blood/receiver/send_request.php?hospitalId="+value1 + "&" + "bloodGroup=" + value2;
